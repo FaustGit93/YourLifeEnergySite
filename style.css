@@ -54,11 +54,24 @@ body {
 
 }
 
-.natural-title {
+.header-text h1 span.natural-title {
     font-family: 'Billabong', 'Yellowtail', cursive;
     font-size: 1.1em;
     display: block;
     color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.header-text h1 span.life-energy {
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 0.95em;
+    display: block;
+    color: #aa018e;
+    margin-top: 8px;
+    outline: none;
+    border-bottom: 1px dashed transparent;
+    transition: border-color 0.3s;
+    cursor: text;
 }
 
 #header1 {
