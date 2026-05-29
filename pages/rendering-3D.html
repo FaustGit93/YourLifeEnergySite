@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fausto Rabatti</title>
+   
+
+    <link rel="stylesheet" href="/style/style4.css">
+
+
+    <link rel="icon" type="image/png" href="/Images/favicon.png"> 
+
+
+
+    <script src="https://kit.fontawesome.com/42a675b1a0.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+
+    <!-----https://script.google.com/macros/s/AKfycbwk-vbpH_SJFjrexmiQl9piEc8U6StW-7xg4EYMIU-iuVLz2i0ReLtPKDWMqQ10nGd_sg/exec------->
+</head>
+
+<body>
+
+    <!----- Headers Start --------->
+
+
+
+    <div id="header1">
+   <!-----     <canvas id="renderCanvas" style="width: 100%; height: 100%px;"></canvas>    ---->
+
+        <div class="container">
+
+            <nav>
+                <img src="Images/" class="" alt="">
+
+                <!-----   <ul id="sidemenu"> ------------>
+                <ul id="sidemenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#about">Chi sono</a></li>
+                    <li><a href="/pages/services.html">Servizi</a></li>
+                    <li><a href="/pages/portfolio.html">Portfolio</a></li>
+                  <!---------  <li><a href="/index.html#contact">Contatti</a></li>   ----->
+                    <i class="fa-solid fa-xmark" onclick="closemenu()" "></i>
+                </ul>
+                <i class="fa-solid fa-bars-staggered" onclick="openmenu()"></i>
+            </nav>
+            <div class="header2-text">
+                <p class="z10"></p>
+                <h1 class="z10">Rendering <span>3D</span><br></h1>
+
+
+            </div>
+        </div>
+        
+        <div class="icon-buttons">
+            <i class="fas fa-arrow-left" onclick="prevModel()" title="Modello precedente"></i>
+            <i class="fas fa-arrow-right" onclick="nextModel()" title="Modello successivo"></i>
+
+          </div>
+     
+
+
+       
+
+      <!---  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnIzN25weWljNDM5MDM4Nmt1eWludDJwaWQ2NDNiOHRqenVtd3hnZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEduEwPB9JKgxOsJG/giphy.gif" loop="infinite" alt="background animation" class="background-image" /> ---->
+
+ 
+
+      <canvas id="renderCanvas" style="width: 100%; height: 70%;"></canvas> 
+      <div id="description" class="description"></div>
+    
+    </div>
+ 
+   
+  
+
+
+
+
+
+
+    <!-----  Header End ------------>
+
+
+       <!----- Headers Start2 --------->
+
+       
+
+
+     
+
+    <!----- // Script change tab   ----->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+
+
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+
+
+        }
+
+    </script>
+
+
+<!-- Babylon Init -->
+
+
+<script>
+    const canvas = document.getElementById("renderCanvas");
+    const engine = new BABYLON.Engine(canvas, true);
+
+    //const models = ["statue.glb", "park.glb", "alessandro_magno.glb","priest_colossal.glb"]; // Modelli disponibili
+    const models = ["statue.glb", "statue2.glb","Rock_decimated1.glb"]; // Modelli disponibili
+    const descriptions = [
+  "Statua classica in marmo, rappresenta una figura mitologica.",
+  "Seconda statua, più moderna e stilizzata.",
+  "Roccia scolpita, con dettagli erosi dal tempo."
+];
+
+    let currentModelIndex = 0;
+    let scene;
+    let currentModelRoot = null;
+
+    function createScene() {
+      scene = new BABYLON.Scene(engine);
+      scene.clearColor = new BABYLON.Color4(0, 0, 0, 1); // Nero
+
+      const camera = new BABYLON.ArcRotateCamera(
+        "Camera",
+        Math.PI / 2,
+        Math.PI / 2.5,
+        100,
+        BABYLON.Vector3.Zero(),
+        scene
+      );
+      camera.attachControl(canvas, true);
+      camera.lowerRadiusLimit = 50;
+      camera.upperRadiusLimit = 200;
+      camera.lowerBetaLimit = 0.5;
+      camera.upperBetaLimit = 1.5;
+
+      new BABYLON.HemisphericLight("light", new BABYLON.Vector3(1, 1, 0), scene);
+      return scene;
+    }
+
+    function loadModel(filename) {
+  if (currentModelRoot) currentModelRoot.dispose();
+
+  BABYLON.SceneLoader.ImportMesh("", "../models/", filename, scene, function (meshes) {
+    if (meshes.length > 0) {
+      currentModelRoot = meshes[0].parent || meshes[0];
+    }
+
+    // Mostra la descrizione relativa al modello corrente
+    document.getElementById("description").textContent = descriptions[currentModelIndex];
+  });
+    }
+
+    function nextModel() {
+      currentModelIndex = (currentModelIndex + 1) % models.length;
+      loadModel(models[currentModelIndex]);
+    }
+
+    function prevModel() {
+      currentModelIndex = (currentModelIndex - 1 + models.length) % models.length;
+      loadModel(models[currentModelIndex]);
+    }
+
+    scene = createScene();
+    loadModel(models[currentModelIndex]); // Primo modello
+
+    engine.runRenderLoop(() => scene.render());
+
+    window.addEventListener("resize", () => engine.resize());
+  </script>
+
+
+<script>
+    const canvas = document.getElementById("renderCanvas");
+  
+    function disablePageScroll() {
+      document.body.style.overflow = "hidden";
+    }
+  
+
+  
+    // Blocca lo scroll quando si inizia a interagire col canvas
+    canvas.addEventListener("pointerdown", disablePageScroll);
+    canvas.addEventListener("touchstart", disablePageScroll);
+  
+ 
+  
+  </script>
+
+
+</body>
+</html>
+
