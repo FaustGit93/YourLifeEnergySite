@@ -284,7 +284,7 @@ margin: 20px 0 35px;
 
 }
 	.services-list div {
-	    background: #d51717;
+	    background: #a8a8a8;
 		padding: 40px;
 		font-size: 12px;
 		font-weight: 300;
@@ -315,7 +315,7 @@ margin: 20px 0 35px;
 		}
 		.services-list div:hover {
 
-		background: #0b13a1;
+		background: #9e00a3;
 			transform: translateY(-15px);
 		}
 		.services-list div img 
