@@ -12,8 +12,8 @@ scroll-behavior: smooth;
 }
 
 body {
-	background: #000000;
-	color: #ffffff
+	background: #ffffff;
+	color: #000000;
 	
 }
 @keyframes fadeInUp {
@@ -186,7 +186,7 @@ width: 100%;
 
 }
 	.services-list div {
-	background: #000000;
+	background: #ffffff;
 	position: relative;
 		//background-image: url(Images/666_1.jpg);
 		padding: 40px;
