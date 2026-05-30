@@ -1,10 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=주+Billabong&display=swap');
- 
-/* Fallback Billabong tramite CDN esterno */
 @font-face {
     font-family: 'Billabong';
-    src: url('https://db.onlinewebfonts.com/t/2a18a5b0a8d975e5c2f0d5da1a54a9f3.woff2') format('woff2'),
-         url('https://db.onlinewebfonts.com/t/2a18a5b0a8d975e5c2f0d5da1a54a9f3.woff') format('woff');
+    src: url('Fonts/billabong/Billabong.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
