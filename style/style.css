@@ -12,8 +12,8 @@ scroll-behavior: smooth;
 }
 
 body {
-	background: #c6df09;
-	color: #a72f2f;
+	background: #ffffff;
+	color: #000000;
 }
 
 @keyframes fadeInUp {
@@ -26,8 +26,89 @@ body {
 	}
 }
 
+.custom-slideshow {
+	position: relative;
+	max-width: 800px;
+	margin: auto;
+  }
+  
+  .custom-slideshow .custom-slide {
+	display: none;
+  }
+  
+  .custom-slideshow .custom-slide img {
+	width: 100%;
+	vertical-align: middle;
+  }
+  
+  .custom-slideshow .custom-prev,
+  .custom-slideshow .custom-next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: rgba(0, 0, 0, 0.5);
+	user-select: none;
+	z-index: 10;
+  }
+  
+  .custom-slideshow .custom-prev {
+	left: 0;
+	border-radius: 0 3px 3px 0;
+	transition: background-color 0.3s ease, color 0.3s ease;
+
+  }
+  .custom-slideshow .custom-prev:hover,
+.custom-slideshow .custom-next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+  
+  .custom-slideshow .custom-next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+
+      #slide-info {
+      margin-top: 1em;
+      font-family: sans-serif;
+    }
+    #slide-subtitle {
+      font-size: 1em;
+      color: #888888;
+      margin-bottom: 0.2em;
+    }
+    #slide-description {
+      font-size: 1.2em;
+      font-weight: bold;
+	  margin-right: auto;
+	  margin-left: auto;
+    }
+	.slide-description p {
+  line-height: 1.5;
+  max-width: 600px;
+  margin-bottom: 1em;
+}
+
+
+
+
+
 .background-image {
 	z-index: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	animation: fadeInUp 1.5s both;
+}
+.background-image1 {
+	z-index: 1;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -143,6 +224,14 @@ width: 100%;
 		}
 
 
+#header2 {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;  /* ← aggiungi solo questo */
+}
+
 .header2-text {
 	margin-top: 20%;
 	font-size: 28px;
@@ -252,18 +341,31 @@ margin: 20px 0 35px;
 
 #services
 {
+	
 	padding: 30px 0; 
 
 }
 
 .services-list
 {
+	z-index: 99999;
 	display: grid; 
 	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 	grid-gap: 40px;
 	margin-top: 30px;
 
 }
+
+.services-list
+{
+	position: relative;
+	z-index: 1;
+	display: grid; 
+	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+	grid-gap: 40px;
+	margin-top: 30px;
+}
+
 	.services-list div {
 	    background: #2e11ad;
 		padding: 40px;
@@ -536,7 +638,7 @@ form input, form textarea
 	width: 100%;
 	text-align: center;
 	padding: 25px 0;
-	background: #000000;
+	background: #d8d8d8e7;
 	font-weight:300;
 	margin-top: 20px;
 }
