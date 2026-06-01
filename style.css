@@ -363,7 +363,7 @@ margin: 20px 0 35px;
 
 }
 	.services-list div {
-	    background: #ad04c3;
+	    background: #806983;
 		padding: 40px;
 		font-size: 12px;
 		font-weight: 300;
@@ -394,7 +394,7 @@ margin: 20px 0 35px;
 		}
 		.services-list div:hover {
 
-		background: #000000;
+		background: #9403d2;
 		color:#ffffff;
 			transform: translateY(-15px);
 		}
@@ -490,7 +490,7 @@ border: none;
 padding: 14px 50px;
 border-radius: 6px;
 text-decoration:none;
-color: #ff0000;
+color: #9403d2;
 transition: background 0.3s;
 }
 
@@ -524,6 +524,7 @@ transition: background 0.3s;
 		transition: transform 0.5s;
 		margin-top: 2px;
 		margin-left: -35px;
+		color:#750258;
 	}
 
 		.btn.btn2:hover {
