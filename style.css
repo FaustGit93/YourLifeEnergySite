@@ -73,7 +73,7 @@ body {
   .custom-slideshow .custom-prev:hover,
 .custom-slideshow .custom-next:hover {
   background-color: rgba(255, 255, 255, 0.8);
-  color: black;
+  color: rgb(0, 0, 0);
 }
   
   .custom-slideshow .custom-next {
@@ -186,7 +186,7 @@ nav ul li
 	nav ul li a
 	
 	{
-		color: #000000;
+		color: #a60aab;
 		text-decoration: none;
 		font-size: 18px;
 		position: relative;
@@ -197,7 +197,7 @@ nav ul li
 content: '';
 width: 0;
 height: 2px;
-background: #9a0690;
+background: #ffffff;
 position: absolute;
 left: 0;
 bottom: -12px;
@@ -293,7 +293,7 @@ width: 100%;
 {
 	font-size: 60px;
 	font-weight: 600;
-	color: #ff0080;
+	color: #a20092;
 }
 .tab-titles
 {
@@ -315,7 +315,7 @@ margin: 20px 0 35px;
 		content: '';
 		width: 0;
 		height: 2px;
-		background: #ff0000; 
+		background: #ad06a7; 
 		position: absolute;
 		left: 0;
 		bottom: -12px;
@@ -363,7 +363,7 @@ margin: 20px 0 35px;
 
 }
 	.services-list div {
-	    background: #a8a8a8;
+	    background: #ad04c3;
 		padding: 40px;
 		font-size: 12px;
 		font-weight: 300;
@@ -386,7 +386,7 @@ margin: 20px 0 35px;
 		.services-list div a
 		{
 			text-decoration:none; 
-			color: #000000;
+			color: #ffffff;
 			font-size: 12px;
 			margin-top: 20px;
 			display: inline-block;
@@ -394,7 +394,8 @@ margin: 20px 0 35px;
 		}
 		.services-list div:hover {
 
-		background: #9e00a3;
+		background: #000000;
+		color:#ffffff;
 			transform: translateY(-15px);
 		}
 		.services-list div img 
@@ -505,7 +506,7 @@ transition: background 0.3s;
 	.btn.btn1 {
 		display: outline-block;
 		background: none;
-		color: #b73333;
+		color: #5d33b7;
 		border: none;
 		margin-top: -20px;
 		transition: transform 0.5s;
@@ -541,20 +542,19 @@ transition: background 0.3s;
 
 .btnphone 
 {
-	color: #ff0000;
+	color: #000000;
 border: none;
 //border: 1px solid #b6ff00;
 
 border-radius: 6px;
 text-decoration:none;
-color: #ff0000;
 transition: background 0.3s;
 
 
 }
 .btnphone:hover
 {
-	
+	color: #c205a3;
 	background: none;
 	text-decoration:underline;
 }
@@ -625,7 +625,7 @@ form input, form textarea
 }
 	.social-icons a:hover
 	{
-		color: #ff0000;
+		color: #d900c3;
 		transform: translateY(-5px);
 
 		
@@ -642,7 +642,7 @@ form input, form textarea
 .copyright i 
 {
 	padding-right:5px;
-	color: #c70000;
+	color: #750258;
 
 
 }
