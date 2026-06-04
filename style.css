@@ -5,11 +5,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Fonts/Montserrat/static/Montserrat-Regular.ttf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'SF Pro Display', sans-serif;
-	//font-family: 'SF Pro Display', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	
 	box-sizing: border-box;
 }
@@ -131,10 +137,11 @@ body {
 }
 
 .header-text h1 span.life-energy {
-    font-family: 'SF Pro Display', sans-serif;
+	font-family: 'Montserrat';
+
     font-size: 0.95em;
     display: block;
-    color: #aa018e;
+    color: #b35fce;
     margin-top: 8px;
     outline: none;
     border-bottom: 1px dashed transparent;
@@ -188,7 +195,7 @@ nav ul li
 	nav ul li a
 	
 	{
-		color: #a60aab;
+		color: #b35fce;
 		text-decoration: none;
 		font-size: 18px;
 		position: relative;
@@ -295,7 +302,8 @@ width: 100%;
 {
 	font-size: 60px;
 	font-weight: 600;
-	color: #a20092;
+	color: #b35fce;
+
 }
 .tab-titles
 {
@@ -317,7 +325,7 @@ margin: 20px 0 35px;
 		content: '';
 		width: 0;
 		height: 2px;
-		background: #ad06a7; 
+		background: #b35fce; 
 		position: absolute;
 		left: 0;
 		bottom: -12px;
@@ -365,7 +373,7 @@ margin: 20px 0 35px;
 
 }
 	.services-list div {
-	    background: #806983;
+	    background: #b35fce;
 		padding: 40px;
 		font-size: 12px;
 		font-weight: 300;
@@ -567,6 +575,7 @@ transition: background 0.3s;
 .subtitle.subtitle3 
 {
 	font-size: 30px;
+	color: #b35fce;
 
 }
 .contact-left 
@@ -784,7 +793,7 @@ nav .fa-solid
 			font-size: 28px;
 		}
 	nav .fa-solid {
-		color: #da00d3;
+		    color: #aa018e;
 		display: block;
 		font-size: 25px;
 		margin-top: 40px;
