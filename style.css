@@ -654,7 +654,8 @@ form input, form textarea
 .copyright i 
 {
 	padding-right:5px;
-	color: #750258;
+	color: #b35fce;
+;
 
 
 }
@@ -793,7 +794,7 @@ nav .fa-solid
 			font-size: 28px;
 		}
 	nav .fa-solid {
-		    color: #aa018e;
+	color: #b35fce;
 		display: block;
 		font-size: 25px;
 		margin-top: 40px;
@@ -801,7 +802,7 @@ nav .fa-solid
 	}
 	nav ul 
 	{
-	background: #ffffffbe;
+	background: #ac98f7;
 	opacity: 100%;
 	position: fixed;
 	top: 0;
