@@ -417,6 +417,30 @@ margin: 20px 0 35px;
 		#portfolio {
 			padding: 50px 0;
 		}
+
+
+		.massage-card,
+.massage-card * {
+    box-sizing: border-box;
+}
+
+/* BLOCCA MARGINI IMPAZZITI */
+.massage-card p,
+.massage-card div {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* EVITA SPACING VERTICALE ECCESSIVO */
+.massage-card {
+    line-height: 1.45;
+}
+
+/* BR NON DEVE CREARE SPAZIO VISIVO */
+.massage-card br {
+    line-height: 0;
+}
+
 .work-list {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -757,6 +781,9 @@ nav .fa-solid
 }
 @media only screen and (max-width: 700px)
 {
+
+
+
 	#header {
 
 	}
@@ -875,6 +902,17 @@ nav .fa-solid
 		font-size: 10px;
 
 	}
+
+
+	    .massage-card {
+        line-height: 1.35;
+    }
+
+    .massage-card p,
+    .massage-card div {
+        margin-bottom: 6px;
+    }
+
 }
 
 /*/-------- Close Css for small screens*/
