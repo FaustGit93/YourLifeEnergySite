@@ -684,6 +684,23 @@ form input, form textarea
 
 }
 
+.copyright .dati-contatto {
+    font-size: 0.9rem;       /* Leggermente più piccolo del testo base */
+    color: #333333;          /* Grigio scuro, quasi nero */
+    font-weight: 500;        /* Leggermente in grassetto per leggibilità */
+    display: block;          /* Assicura che vada a capo correttamente */
+}
+
+/* Stile specifico per il disclaimer legale marchi */
+.copyright .disclaimer-marchi {
+    font-size: 0.75rem;      /* Molto piccolo (circa 10-12px a seconda del base) */
+    color: #888888;          /* Grigio medio/chiaro per non distrarre */
+    font-weight: 400;        /* Peso normale */
+    display: block;
+    margin-top: 4px;         /* Un piccolo spazio extra di separazione opzionale */
+    line-height: 1.4;        /* Migliore leggibilità anche se piccolo */
+}
+
 
 
 footer {
@@ -912,6 +929,11 @@ nav .fa-solid
     .massage-card div {
         margin-bottom: 6px;
     }
+
+    .copyright .disclaimer-marchi {
+        font-size: 0.65rem;  /* Ancora più piccolo su mobile se necessario */
+    
+}
 
 }
 
