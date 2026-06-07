@@ -720,7 +720,7 @@ footer {
 	overflow-x: hidden;
 	  overflow-y: hidden;
 	position: relative;
-	z-index: 10;
+	z-index: -10;
 	margin-bottom:30px;
 	}
 	
