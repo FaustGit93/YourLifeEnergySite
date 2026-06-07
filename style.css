@@ -46,6 +46,7 @@ body {
 	position: relative;
 	max-width: 800px;
 	margin: auto;
+	z-index: 1;
   }
   
   .custom-slideshow .custom-slide {
