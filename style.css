@@ -727,7 +727,7 @@ footer {
 	
 	.scrolling-track {
 	display: flex;
-	animation: scrollLeft 30s linear infinite;
+	animation: scrollLeft 20s linear infinite;
 	width: fit-content;
 	}
 	
